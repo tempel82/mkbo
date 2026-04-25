@@ -1507,8 +1507,15 @@ if (document.getElementById("fighter1")) {
     // MOBILE TOUCH CONTROLS
     // ===========================
     const mobileActionMap = {
-        "p1-left": () => movePlayer("p1", -2),
-        "p1-right": () => movePlayer("p1", 2),
+        "p1-left": () => {
+            alert("P1 LEFT knop werkt");
+            movePlayer("p1", -2);
+        },
+
+        "p1-right": () => {
+            alert("P1 RIGHT knop werkt");
+            movePlayer("p1", 2);
+        },
         "p1-jump":     () => jump("p1"),
         "p1-punch":    () => punch("p1"),
         "p1-kick":     () => kick("p1"),
