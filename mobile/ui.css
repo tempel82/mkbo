@@ -62,16 +62,6 @@
         bottom: 8vh !important;
         max-height: 72vh !important;
     }
-
-    body.is-mobile.fight-page #fighter1 {
-        left: 6% !important;
-        right: auto !important;
-    }
-
-    body.is-mobile.fight-page #fighter2 {
-        right: 6% !important;
-        left: auto !important;
-    }
 }
 
 /* STAP 11B - mobile knoppen echt klikbaar maken */
