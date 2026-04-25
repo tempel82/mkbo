@@ -2559,4 +2559,21 @@ body.is-mobile .arena {
         z-index: 30000 !important;
     }
 
+    /* ✅ ECHTE SMARTPHONE FIX: laat JS left/right weer bewegen */
+    @media (max-width: 900px) and (orientation: landscape) {
+
+        html body.is-mobile.fight-page #fighter1 {
+            left: unset !important;
+        }
+
+        html body.is-mobile.fight-page #fighter2 {
+            right: unset !important;
+        }
+
+        html body.is-mobile.fight-page .fighter {
+            height: 112vh !important;
+            bottom: 6vh !important;
+        }
+    }
+
 }
