@@ -1515,8 +1515,8 @@ if (document.getElementById("fighter1")) {
         "p1-uppercut": () => uppercut("p1"),
         "p1-special":  () => specialAttack("p1"),
         "p1-block":    null, // handled as hold
-        "p2-left":     () => movePlayer("p2", -1),
-        "p2-right":    () => movePlayer("p2", 1),
+        "p2-left": () => movePlayer("p2", -2),
+        "p2-right": () => movePlayer("p2", 2),
         "p2-jump":     () => jump("p2"),
         "p2-punch":    () => punch("p2"),
         "p2-kick":     () => kick("p2"),
