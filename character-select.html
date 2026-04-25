@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortal Kombat Character Select</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="character-select-page">
+    <div id="fullscreenHint" class="fs-hint">
+        🎮 Klik op fullscreen voor beste ervaring
+    </div>
+    <button id="fullscreenBtn" class="fullscreen-mini" title="Fullscreen">⛶</button>
+    <div class="overlay select-layout">
+
+        <div class="select-header">
+
+            <div class="player-label" id="p1Label">PLAYER 1</div>
+
+            <div class="top-info-panel">
+                <div class="title">CHOOSE YOUR FIGHTER</div>
+                <div class="top-subinfo" id="topSubInfo">Selecteer mode en fighter</div>
+            </div>
+
+            <div class="player-label" id="p2Label">PLAYER 2</div>
+        </div>
+
+        <div class="mode-bar">
+            <button class="mode-btn active" id="modePvpBtn" data-mode="pvp">2 PLAYERS</button>
+            <button class="mode-btn" id="modeCpuBtn" data-mode="cpu">VS CPU</button>
+            <button class="mode-btn" id="modeTower5Btn" data-mode="tower5">TOWER 5</button>
+        </div>
+
+        <div class="select-stage">
+
+            <div class="preview preview-left">
+                <h2>PLAYER 1</h2>
+                <div class="placeholder" id="p1Placeholder">Nog geen fighter gekozen</div>
+                <img id="p1PreviewImg" src="" alt="Player 1 Fighter" />
+                <div class="fighter-name" id="p1Name"></div>
+            </div>
+
+            <div class="roster-panel">
+                <div class="turn-indicator" id="turnIndicator">PLAYER 1 KIEST</div>
+                <div class="full-roster-grid" id="fighterGrid"></div>
+                <div class="tower-mini-grid" id="towerMiniGrid" style="display:none;"></div>
+
+                <div class="bottom-bar">
+                    <button id="lockBtn">LOCK IN</button>
+                    <button id="resetBtn">RESET</button>
+                    <button id="startBtn">START FIGHT</button>
+                </div>
+
+                <div class="status" id="statusText"></div>
+            </div>
+
+            <div class="preview preview-right">
+                <h2>PLAYER 2</h2>
+                <div class="placeholder" id="p2Placeholder">Nog geen fighter gekozen</div>
+                <img id="p2PreviewImg" src="" alt="Player 2 Fighter" />
+                <div class="fighter-name" id="p2Name"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/config.js"></script>
+    <script src="data/fighters.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

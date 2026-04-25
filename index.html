@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mortal Kombat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+    <div id="fullscreenHint" class="fs-hint">
+        🎮 Klik op fullscreen voor beste ervaring
+    </div>
+    <button id="fullscreenBtn" class="fullscreen-mini" title="Fullscreen">⛶</button>
+    <div class="start-screen">
+        <h1>MORTAL KOMBAT</h1>
+        <button class="start-btn" onclick="startGame()">START</button>
+        <div id="deviceInfo" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 999;
+">
+            Detecting device...
+        </div>
+    </div>
+    <script src="data/config.js"></script>
+    <script src="data/fighters.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

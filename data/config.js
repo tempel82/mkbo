@@ -1,0 +1,5 @@
+const CONFIG = {
+    MAX_HEALTH: 100,
+    WIN_ROUNDS: 2,
+    ATTACK_RANGE: 120
+};

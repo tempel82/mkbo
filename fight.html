@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <title>Mortal Kombat Fight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fight-page">
+    <div id="fullscreenHint" class="fs-hint">
+        🎮 Klik op fullscreen voor beste ervaring
+    </div>
+    <button id="fullscreenBtn" class="fullscreen-mini" title="Fullscreen">⛶</button>
+    <div class="game-wrap" id="gameWrap">
+        <div class="top-ui">
+            <div class="hud">
+                <div class="health-section">
+                    <div class="player-name" id="name1">PLAYER 1</div>
+                    <div class="healthbar-frame">
+                        <div class="healthbar" id="health1"></div>
+                    </div>
+                    <div class="round-dots" id="rounds1">
+                        <span class="round-dot" id="p1dot1"></span>
+                        <span class="round-dot" id="p1dot2"></span>
+                    </div>
+                </div>
+
+                <div class="timer-box" id="timer">99</div>
+
+                <div class="health-section">
+                    <div class="player-name right" id="name2">PLAYER 2</div>
+                    <div class="healthbar-frame">
+                        <div class="healthbar right" id="health2"></div>
+                    </div>
+                    <div class="round-dots right" id="rounds2">
+                        <span class="round-dot" id="p2dot1"></span>
+                        <span class="round-dot" id="p2dot2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-buttons">
+            <button class="ui-btn" id="backBtn">Character Select</button>
+            <button class="ui-btn" id="resetFightBtn">Reset Fight</button>
+        </div>
+
+        <div class="arena" id="arena">
+            <div class="ground"></div>
+            <div class="shadow" id="shadow1"></div>
+            <div class="shadow" id="shadow2"></div>
+
+            <img id="fighter1" class="fighter" src="" alt="fighter 1">
+            <img id="fighter2" class="fighter" src="" alt="fighter 2">
+
+            <div id="introText" class="intro-text"></div>
+            <div id="resultText" class="result-text"></div>
+
+            <div class="controls-help">
+                <strong>Controls</strong><br>
+                P1: <b>A</b> links, <b>D</b> rechts, <b>W</b> jump, <b>F</b> punch, <b>G</b> kick, <b>H</b> uppercut, <b>R</b> special<br>
+                P2: <b>←</b> links, <b>→</b> rechts, <b>↑</b> jump, <b>L</b> punch, <b>K</b> kick, <b>J</b> uppercut, <b>U</b> special
+            </div>
+
+            <!-- Mobile controls - auto shown on touch devices -->
+            <div class="mobile-actions" id="mobileActions">
+                <!-- P1 left side: D-pad -->
+                <div class="mobile-controller left-controller">
+                    <div class="ctrl-label">P1</div>
+                    <div class="dpad">
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-up" data-action="p1-jump">▲</button>
+                        </div>
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-left" data-action="p1-left">◀</button>
+                            <div class="dpad-center"></div>
+                            <button class="dpad-btn dpad-right" data-action="p1-right">▶</button>
+                        </div>
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-down" data-action="p1-block">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- P1 right side: action buttons -->
+                <div class="mobile-controller left-actions">
+                    <div class="action-btns">
+                        <div class="action-row">
+                            <button class="action-btn btn-special" data-action="p1-special">★</button>
+                            <button class="action-btn btn-uppercut" data-action="p1-uppercut">UC</button>
+                        </div>
+                        <div class="action-row">
+                            <button class="action-btn btn-kick" data-action="p1-kick">KICK</button>
+                            <button class="action-btn btn-punch" data-action="p1-punch">PUN</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- P2 left side: action buttons -->
+                <div class="mobile-controller right-actions">
+                    <div class="action-btns">
+                        <div class="action-row">
+                            <button class="action-btn btn-uppercut" data-action="p2-uppercut">UC</button>
+                            <button class="action-btn btn-special" data-action="p2-special">★</button>
+                        </div>
+                        <div class="action-row">
+                            <button class="action-btn btn-punch" data-action="p2-punch">PUN</button>
+                            <button class="action-btn btn-kick" data-action="p2-kick">KICK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- P2 right side: D-pad -->
+                <div class="mobile-controller right-controller">
+                    <div class="ctrl-label">P2</div>
+                    <div class="dpad">
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-up" data-action="p2-jump">▲</button>
+                        </div>
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-left" data-action="p2-left">◀</button>
+                            <div class="dpad-center"></div>
+                            <button class="dpad-btn dpad-right" data-action="p2-right">▶</button>
+                        </div>
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-down" data-action="p2-block">▼</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/config.js"></script>
+    <script src="data/fighters.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
