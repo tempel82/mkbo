@@ -1501,8 +1501,8 @@ if (document.getElementById("fighter1")) {
     // MOBILE TOUCH CONTROLS
     // ===========================
     const mobileActionMap = {
-        "p1-left":     () => movePlayer("p1", -1),
-        "p1-right":    () => movePlayer("p1", 1),
+        "p1-left": () => movePlayer("p1", -2),
+        "p1-right": () => movePlayer("p1", 2),
         "p1-jump":     () => jump("p1"),
         "p1-punch":    () => punch("p1"),
         "p1-kick":     () => kick("p1"),
@@ -1534,7 +1534,7 @@ if (document.getElementById("fighter1")) {
         fn(); // fire immediately
         // For movement, fire continuously while held
         if (action.endsWith("-left") || action.endsWith("-right")) {
-            holdIntervals[action] = setInterval(fn, 40);
+            holdIntervals[action] = setInterval(fn, 25);
         }
     }
 
@@ -1552,34 +1552,23 @@ if (document.getElementById("fighter1")) {
         const action = btn.dataset.action;
         if (!action) return;
 
-        btn.addEventListener("touchstart", (e) => {
+        const start = (e) => {
             e.preventDefault();
             startMobileHold(action);
-        }, { passive: false });
+        };
 
-        btn.addEventListener("touchend", (e) => {
+        const stop = (e) => {
             e.preventDefault();
             stopMobileHold(action);
-        }, { passive: false });
+        };
 
-        btn.addEventListener("touchcancel", (e) => {
-            e.preventDefault();
-            stopMobileHold(action);
-        }, { passive: false });
+        btn.addEventListener("touchstart", start, { passive: false });
+        btn.addEventListener("touchend", stop, { passive: false });
+        btn.addEventListener("touchcancel", stop, { passive: false });
 
-        btn.addEventListener("mousedown", (e) => {
-            e.preventDefault();
-            startMobileHold(action);
-        });
-
-        btn.addEventListener("mouseup", (e) => {
-            e.preventDefault();
-            stopMobileHold(action);
-        });
-
-        btn.addEventListener("mouseleave", () => {
-            stopMobileHold(action);
-        });
+        btn.addEventListener("mousedown", start);
+        btn.addEventListener("mouseup", stop);
+        btn.addEventListener("mouseleave", () => stopMobileHold(action));
     });
 
     updateHealthUI();
