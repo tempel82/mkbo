@@ -2484,13 +2484,6 @@ body.is-mobile .arena {
             bottom: 3% !important;
         }
 
-        body.is-mobile #fighter1 {
-            left: 8% !important;
-        }
-
-        body.is-mobile #fighter2 {
-            right: 8% !important;
-        }
     }
 
     @media (max-width: 900px) and (orientation: landscape) {
