@@ -2089,7 +2089,7 @@ body.fight-page {
         }
     }
 
-    /* 📱 Smartphone: enkel VS CPU tonen */
+    /* 📱 Smartphone: enkel VS CPU tonen 
     body.is-mobile.character-select-page #modePvpBtn,
     body.is-mobile.character-select-page #modeTower5Btn {
         display: none !important;
@@ -2099,20 +2099,20 @@ body.fight-page {
         display: inline-block !important;
     }
 
-    /* 📱 MOBILE CONTROLS FIX - enkel 1 speler */
+    /* 📱 MOBILE CONTROLS FIX - enkel 1 speler 
     body.is-mobile .right-controller,
     body.is-mobile .right-actions {
         display: none !important;
     }
 
-    /* links = movement */
+    /* links = movement 
     body.is-mobile .left-controller {
         left: 10px;
         bottom: 10px;
         position: fixed;
     }
 
-    /* rechts = acties (verplaats P1 actions naar rechts) */
+    /* rechts = acties (verplaats P1 actions naar rechts) 
     body.is-mobile .left-actions {
         right: 10px;
         left: auto;
@@ -2120,7 +2120,7 @@ body.fight-page {
         position: fixed;
     }
 
-    /* iets groter voor duimen */
+    /* iets groter voor duimen 
     body.is-mobile .dpad-btn,
     body.is-mobile .action-btn {
         width: 60px;
@@ -2137,17 +2137,17 @@ body.fight-page {
         opacity: 0.85;
     }
 
-    /* 📱 RECHTER KNOPPEN VERTICAAL */
+    /* 📱 RECHTER KNOPPEN VERTICAAL 
     body.is-mobile .left-actions .action-btns {
         display: flex;
         flex-direction: column; /* 👈 verticaal */
         gap: 10px;
     }
 
-    /* 📱 RECHTER KNOPPEN VERTICAAL */
+    /* 📱 RECHTER KNOPPEN VERTICAAL 
     body.is-mobile .left-actions .action-btns {
         display: flex;
-        flex-direction: column; /* 👈 verticaal */
+        flex-direction: column; /* 👈 verticaal 
         gap: 10px;
     }
 
@@ -2158,29 +2158,29 @@ body.fight-page {
         transform: translateY(50%);
     }
 
-    /* 🎮 PERFECTE MOBILE CONTROLS FIX */
+    /* 🎮 PERFECTE MOBILE CONTROLS FIX 
     @media (max-width: 900px) and (orientation: landscape) {
 
-        /* container reset */
+        /* container reset 
         body.is-mobile .mobile-actions {
             justify-content: space-between !important;
             align-items: flex-end !important;
             padding: 10px !important;
         }
 
-        /* ⬅️ LEFT = D-PAD */
+        /* ⬅️ LEFT = D-PAD 
         body.is-mobile .left-controller {
             position: fixed !important;
             left: 10px !important;
             bottom: 10px !important;
         }
 
-        /* ❌ verwijder oude positioning */
+        /* ❌ verwijder oude positioning 
         body.is-mobile .left-actions {
             all: unset;
         }
 
-        /* 👉 NIEUWE RIGHT ACTIONS */
+        /* 👉 NIEUWE RIGHT ACTIONS 
         body.is-mobile .left-actions {
             position: fixed !important;
             right: 10px !important;
@@ -2191,19 +2191,19 @@ body.fight-page {
             z-index: 9999 !important;
         }
 
-        /* ❌ breek de 2 rijen structuur */
+        /* ❌ breek de 2 rijen structuur 
         body.is-mobile .action-row {
             display: contents !important;
         }
 
-        /* 👉 ALLE KNOPPEN ONDER ELKAAR */
+        /* 👉 ALLE KNOPPEN ONDER ELKAAR 
         body.is-mobile .action-btns {
             display: flex !important;
             flex-direction: column !important;
             gap: 10px !important;
         }
 
-        /* 👻 TRANSPARANTE KNOPPEN */
+        /* 👻 TRANSPARANTE KNOPPEN 
         body.is-mobile .action-btn {
             width: 60px !important;
             height: 60px !important;
@@ -2219,7 +2219,7 @@ body.fight-page {
             }
     }
 
-    /* ✅ MOBILE CONTROLS FINAL FIX */
+    /* ✅ MOBILE CONTROLS FINAL FIX 
     @media (max-width: 900px) and (orientation: landscape) {
 
         body.is-mobile .mobile-actions {
@@ -2235,7 +2235,7 @@ body.fight-page {
 
         body.is-mobile .left-controller {
             position: fixed !important;
-            left: -6px !important; /* meer naar links */
+            left: -6px !important; /* meer naar links 
             bottom: 8px !important;
             pointer-events: auto !important;
             z-index: 10000 !important;
@@ -2243,7 +2243,7 @@ body.fight-page {
 
         body.is-mobile .left-actions {
             position: fixed !important;
-            right: -4px !important; /* meer naar rechts */
+            right: -4px !important; /* meer naar rechts 
             bottom: 8px !important;
             display: block !important;
             pointer-events: auto !important;
@@ -2290,7 +2290,7 @@ body.fight-page {
         }
     }
 
-    /* 🎮 fullscreen hint overlay */
+    /* 🎮 fullscreen hint overlay 
     .fs-hint {
         position: fixed;
         inset: 0;
@@ -2307,7 +2307,7 @@ body.fight-page {
         animation: fadePulse 1.5s infinite;
     }
 
-    /* ✨ zachte animatie */
+    /* ✨ zachte animatie 
     @keyframes fadePulse {
         0% {
             opacity: 0.6;
@@ -2322,7 +2322,7 @@ body.fight-page {
         }
     }
 
-    /* ✅ Fullscreen melding blokkeert klikken niet */
+    /* ✅ Fullscreen melding blokkeert klikken niet 
     .fs-hint {
         pointer-events: none !important;
         z-index: 99990 !important;
@@ -2332,7 +2332,7 @@ body.fight-page {
         z-index: 100000 !important;
     }
 
-    /* ✅ Smartphone fighters groter maken */
+    /* ✅ Smartphone fighters groter maken 
     @media (max-width: 900px) and (orientation: landscape) {
 
         body.is-mobile .fighter {
@@ -2346,7 +2346,7 @@ body.fight-page {
 
         body.is-mobile .fighter {
             height: 95vh !important;
-            bottom: -5% !important; /* 👈 trekt ze naar beneden */
+            bottom: -5% !important; /* 👈 trekt ze naar beneden 
         }
     }
 
@@ -2356,7 +2356,7 @@ body.fight-page {
         filter: drop-shadow(0 20px 25px rgba(0,0,0,0.9));
     }
 
-    /* ✅ Fighters automatisch perfect schalen per scherm */
+    /* ✅ Fighters automatisch perfect schalen per scherm 
     @media (max-width: 900px) and (orientation: landscape) {
 
         body.is-mobile .fighter {
@@ -2366,7 +2366,7 @@ body.fight-page {
 
     }
 
-    /* ✅ FINAL: fighters groot op smartphone */
+    /* ✅ FINAL: fighters groot op smartphone 
     @media (max-width: 900px) and (orientation: landscape) {
 
         html body.is-mobile.fight-page .fighter {
@@ -2386,7 +2386,7 @@ body.fight-page {
         }
     }
 
-    /* ✅ Betere browser support voor mobile controls */
+    /* ✅ Betere browser support voor mobile controls 
     body.is-mobile .dpad-btn,
     body.is-mobile .action-btn {
         touch-action: none !important;
@@ -2404,7 +2404,7 @@ body.fight-page {
         pointer-events: none !important;
     }
 
-    /* ✅ Fix linkse pad klikbaar houden */
+    /* ✅ Fix linkse pad klikbaar houden 
     body.is-mobile .left-controller,
     body.is-mobile .left-controller *,
     body.is-mobile .dpad,
@@ -2433,9 +2433,9 @@ body.fight-page {
         }
     }
 */
-    /* =========================
+/* =========================
    CLEAN MOBILE CONTROLS
-========================= */
+========================= 
 
     body.is-mobile .controls-help {
         display: none !important;
@@ -2521,7 +2521,7 @@ body.fight-page {
         touch-action: none !important;
     }
 
-    /* ✅ Brave mobile touch fix */
+    /* ✅ Brave mobile touch fix 
     body.is-mobile .dpad-btn,
     body.is-mobile .action-btn {
         touch-action: none !important;
@@ -2539,7 +2539,7 @@ body.fight-page {
         pointer-events: auto !important;
     }
 
-    /* ✅ Smartphone: alleen VS CPU tonen */
+    /* ✅ Smartphone: alleen VS CPU tonen 
     @media (max-width: 900px) and (orientation: landscape) {
         body.character-select-page #modePvpBtn,
         body.character-select-page #modeTower5Btn {
@@ -2554,5 +2554,5 @@ body.fight-page {
             pointer-events: none !important;
         }
     }
-
+*/
 }
