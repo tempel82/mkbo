@@ -2515,13 +2515,6 @@ body.is-mobile .arena {
             bottom: clamp(-45px, -6vh, -15px) !important;
         }
 
-        body.is-mobile #fighter1 {
-            left: clamp(20px, 7vw, 70px) !important;
-        }
-
-        body.is-mobile #fighter2 {
-            right: clamp(20px, 7vw, 70px) !important;
-        }
     }
 
     /* ✅ FINAL: fighters groot op smartphone */
@@ -2534,13 +2527,6 @@ body.is-mobile .arena {
             bottom: -18vh !important;
         }
 
-        html body.is-mobile.fight-page #fighter1 {
-            left: 4vw !important;
-        }
-
-        html body.is-mobile.fight-page #fighter2 {
-            right: 4vw !important;
-        }
     }
 
     @media (max-width: 900px) and (orientation: landscape) {
