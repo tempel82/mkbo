@@ -818,16 +818,14 @@ if (document.getElementById("fighter1")) {
     }
 
     function updatePos() {
-        fighter1El.style.setProperty("left", state.p1.x + "%", "important");
-        fighter2El.style.setProperty("right", state.p2.x + "%", "important");
+        fighter1El.style.left = state.p1.x + "%";
+        fighter2El.style.right = state.p2.x + "%";
 
-        if (!state.p1.attacking) {
+        if (!state.matchEnded && !state.fightEnded) {
             fighter1El.style.transform = getFightScale(fighterData.p1, "p1");
-        }
-
-        if (!state.p2.attacking) {
             fighter2El.style.transform = getFightScale(fighterData.p2, "p2");
         }
+    }
 
         const rect1 = fighter1El.getBoundingClientRect();
         const rect2 = fighter2El.getBoundingClientRect();

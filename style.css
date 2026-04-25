@@ -1173,161 +1173,6 @@ body.fight-page {
 }
 
 /* =========================
-   MOBILE DETECTION CLASS
-========================= */
-body.is-mobile .controls-help {
-    display: none;
-}
-
-/* Hidden by default, shown on touch/mobile */
-.mobile-actions {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 160px;
-    z-index: 35;
-    pointer-events: none;
-    padding: 8px 10px;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 6px;
-    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.0) 100%);
-}
-
-body.is-mobile .mobile-actions {
-    display: flex;
-}
-
-/* arena needs extra bottom space for controls on mobile */
-body.is-mobile .arena {
-    height: calc(100% - 160px);
-}
-
-.mobile-controller {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    pointer-events: auto;
-}
-
-.ctrl-label {
-    font-size: 10px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.55);
-    letter-spacing: 1px;
-    margin-bottom: 2px;
-}
-
-/* D-pad */
-.dpad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-}
-
-.dpad-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-}
-
-.dpad-center {
-    width: 34px;
-    height: 34px;
-    background: rgba(30,30,30,0.7);
-    border-radius: 4px;
-}
-
-.dpad-btn {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(20,20,20,0.82);
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: background 0.08s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-.dpad-btn:active {
-    background: rgba(255, 213, 74, 0.35);
-    border-color: #ffd54a;
-}
-
-/* Action buttons */
-.action-btns {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.action-row {
-    display: flex;
-    gap: 5px;
-}
-
-.action-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.18);
-    font-size: 11px;
-    font-weight: 900;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    letter-spacing: 0.5px;
-    transition: transform 0.08s, filter 0.08s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-.action-btn:active {
-    transform: scale(0.88);
-    filter: brightness(1.4);
-}
-
-.btn-punch {
-    background: radial-gradient(circle at 35% 35%, #2979ff, #1a237e);
-    color: white;
-    border-color: #5c9aff;
-}
-
-.btn-kick {
-    background: radial-gradient(circle at 35% 35%, #ff6d00, #bf360c);
-    color: white;
-    border-color: #ff9a5c;
-}
-
-.btn-uppercut {
-    background: radial-gradient(circle at 35% 35%, #aa00ff, #6a0080);
-    color: white;
-    border-color: #cc66ff;
-}
-
-.btn-special {
-    background: radial-gradient(circle at 35% 35%, #ffd600, #e65100);
-    color: black;
-    border-color: #ffe57a;
-    font-size: 16px;
-}
-
-/* =========================
    FULLSCREEN MINI BUTTON
 ========================= */
 .fullscreen-mini {
@@ -2574,6 +2419,94 @@ body.is-mobile .arena {
             height: 112vh !important;
             bottom: 6vh !important;
         }
+    }
+
+    /* =========================
+   CLEAN MOBILE CONTROLS
+========================= */
+
+    body.is-mobile .controls-help {
+        display: none !important;
+    }
+
+    body.is-mobile .mobile-actions {
+        display: block !important;
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: transparent !important;
+        pointer-events: none !important;
+        z-index: 50000 !important;
+    }
+
+    body.is-mobile .left-controller {
+        position: fixed !important;
+        left: 4px !important;
+        bottom: 8px !important;
+        pointer-events: auto !important;
+        z-index: 50001 !important;
+    }
+
+    body.is-mobile .left-actions {
+        position: fixed !important;
+        right: 4px !important;
+        bottom: 8px !important;
+        pointer-events: auto !important;
+        z-index: 50001 !important;
+    }
+
+    body.is-mobile .right-controller,
+    body.is-mobile .right-actions {
+        display: none !important;
+    }
+
+    body.is-mobile .dpad {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        pointer-events: auto !important;
+    }
+
+    body.is-mobile .dpad-row {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        pointer-events: auto !important;
+    }
+
+    body.is-mobile .dpad-center {
+        width: 56px !important;
+        height: 56px !important;
+        pointer-events: none !important;
+    }
+
+    body.is-mobile .dpad-btn {
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 14px !important;
+        pointer-events: auto !important;
+        touch-action: none !important;
+        opacity: 0.75 !important;
+    }
+
+    body.is-mobile .action-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    body.is-mobile .action-row {
+        display: contents !important;
+    }
+
+    body.is-mobile .action-btn {
+        width: 54px !important;
+        height: 54px !important;
+        border-radius: 50% !important;
+        opacity: 0.65 !important;
+        pointer-events: auto !important;
+        touch-action: none !important;
     }
 
 }
