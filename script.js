@@ -118,7 +118,15 @@ if (document.getElementById("fighterGrid")) {
     let selectedHover = null;
     let player1 = null;
     let player2 = null;
-    let selectedMode = document.body.classList.contains("is-mobile") ? "cpu" : "pvp";
+    let selectedMode = "pvp";
+
+    if (
+        window.innerWidth <= 900 ||
+        navigator.maxTouchPoints > 0 ||
+        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    ) {
+        selectedMode = "cpu";
+    }
 
     function getCorrectScale(fighter, player) {
         if (player === 1) {
@@ -825,8 +833,8 @@ if (document.getElementById("fighter1")) {
             fighter1El.style.transform = getFightScale(fighterData.p1, "p1");
             fighter2El.style.transform = getFightScale(fighterData.p2, "p2");
         }
-    }
 
+        // ✅ Z-index overlap fix (MOET BINNEN de functie zitten)
         const rect1 = fighter1El.getBoundingClientRect();
         const rect2 = fighter2El.getBoundingClientRect();
         const overlap = rect1.right > rect2.left;
