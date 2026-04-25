@@ -818,8 +818,8 @@ if (document.getElementById("fighter1")) {
     }
 
     function updatePos() {
-        fighter1El.style.left = state.p1.x + "%";
-        fighter2El.style.right = state.p2.x + "%";
+        fighter1El.style.setProperty("left", state.p1.x + "%", "important");
+        fighter2El.style.setProperty("right", state.p2.x + "%", "important");
 
         if (!state.p1.attacking) {
             fighter1El.style.transform = getFightScale(fighterData.p1, "p1");
