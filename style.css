@@ -2569,4 +2569,15 @@ body.is-mobile .arena {
         pointer-events: none !important;
     }
 
+    /* ✅ Fix linkse pad klikbaar houden */
+    body.is-mobile .left-controller,
+    body.is-mobile .left-controller *,
+    body.is-mobile .dpad,
+    body.is-mobile .dpad-row,
+    body.is-mobile .dpad-btn {
+        pointer-events: auto !important;
+        touch-action: none !important;
+        z-index: 30000 !important;
+    }
+
 }

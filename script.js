@@ -1552,21 +1552,34 @@ if (document.getElementById("fighter1")) {
         const action = btn.dataset.action;
         if (!action) return;
 
-        const start = (e) => {
+        btn.addEventListener("touchstart", (e) => {
             e.preventDefault();
-            btn.setPointerCapture?.(e.pointerId);
             startMobileHold(action);
-        };
+        }, { passive: false });
 
-        const stop = (e) => {
+        btn.addEventListener("touchend", (e) => {
             e.preventDefault();
             stopMobileHold(action);
-        };
+        }, { passive: false });
 
-        btn.addEventListener("pointerdown", start);
-        btn.addEventListener("pointerup", stop);
-        btn.addEventListener("pointercancel", stop);
-        btn.addEventListener("lostpointercapture", stop);
+        btn.addEventListener("touchcancel", (e) => {
+            e.preventDefault();
+            stopMobileHold(action);
+        }, { passive: false });
+
+        btn.addEventListener("mousedown", (e) => {
+            e.preventDefault();
+            startMobileHold(action);
+        });
+
+        btn.addEventListener("mouseup", (e) => {
+            e.preventDefault();
+            stopMobileHold(action);
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            stopMobileHold(action);
+        });
     });
 
     updateHealthUI();
