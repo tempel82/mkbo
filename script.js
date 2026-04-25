@@ -1230,9 +1230,12 @@ if (document.getElementById("fighter1")) {
 
     function movePlayer(playerKey, direction) {
         const player = state[playerKey];
-        if (!player.canMove || state.fightEnded) return;
 
-        const moveAmount = 1.6;
+        if (state.matchEnded || state.fightEnded) return;
+        if (state.fightStarted === false) return;
+        if (player.attacking || player.jumping || player.blocking) return;
+
+        const moveAmount = 2.2;
         state.lastMover = playerKey;
 
         if (playerKey === "p2") {
