@@ -42,6 +42,27 @@ document.addEventListener("DOMContentLoaded", () => {
     detectMobile();
     window.addEventListener("resize", detectMobile);
 
+    // 🔍 Detect Brave (simpel)
+    const isBrave = navigator.userAgent.includes("Brave");
+
+    if (isBrave) {
+        console.log("Brave browser gedetecteerd");
+
+        const warn = document.createElement("div");
+        warn.innerText = "⚠️ Gebruik Chrome voor beste besturing";
+        warn.style.position = "fixed";
+        warn.style.top = "60px";
+        warn.style.left = "50%";
+        warn.style.transform = "translateX(-50%)";
+        warn.style.background = "rgba(0,0,0,0.8)";
+        warn.style.color = "#ffd54a";
+        warn.style.padding = "8px 12px";
+        warn.style.borderRadius = "8px";
+        warn.style.zIndex = "99999";
+
+        document.body.appendChild(warn);
+    }
+
     const globalFullscreenBtn = document.getElementById("fullscreenBtn");
     const fsHint = document.getElementById("fullscreenHint");
 

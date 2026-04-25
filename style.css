@@ -2527,4 +2527,18 @@ body.fight-page {
         pointer-events: auto !important;
     }
 
+    .browser-warning {
+        position: fixed;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999;
+        background: rgba(0,0,0,0.8);
+        color: #ffd54a;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
 }
