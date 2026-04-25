@@ -73,3 +73,22 @@
         left: auto !important;
     }
 }
+
+/* STAP 11B - mobile knoppen echt klikbaar maken */
+@media (max-width: 900px) and (orientation: landscape) {
+    body.is-mobile.fight-page .mobile-actions {
+        pointer-events: none !important;
+        z-index: 99999 !important;
+    }
+
+    body.is-mobile.fight-page .left-controller,
+    body.is-mobile.fight-page .left-controller *,
+    body.is-mobile.fight-page .left-actions,
+    body.is-mobile.fight-page .left-actions * {
+        pointer-events: auto !important;
+        touch-action: none !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
+        z-index: 100000 !important;
+    }
+}
