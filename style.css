@@ -2509,4 +2509,22 @@ body.fight-page {
         touch-action: none !important;
     }
 
+    /* ✅ Brave mobile touch fix */
+    body.is-mobile .dpad-btn,
+    body.is-mobile .action-btn {
+        touch-action: none !important;
+        -ms-touch-action: none !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    body.is-mobile .left-controller,
+    body.is-mobile .left-controller *,
+    body.is-mobile .mobile-controller,
+    body.is-mobile .dpad,
+    body.is-mobile .dpad-row {
+        pointer-events: auto !important;
+    }
+
 }
