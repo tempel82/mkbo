@@ -1552,26 +1552,21 @@ if (document.getElementById("fighter1")) {
         const action = btn.dataset.action;
         if (!action) return;
 
-        // Touch events for mobile
-        btn.addEventListener("touchstart", (e) => {
+        const start = (e) => {
             e.preventDefault();
+            btn.setPointerCapture?.(e.pointerId);
             startMobileHold(action);
-        }, { passive: false });
+        };
 
-        btn.addEventListener("touchend", (e) => {
+        const stop = (e) => {
             e.preventDefault();
             stopMobileHold(action);
-        }, { passive: false });
+        };
 
-        btn.addEventListener("touchcancel", (e) => {
-            e.preventDefault();
-            stopMobileHold(action);
-        }, { passive: false });
-
-        // Mouse fallback for desktop testing
-        btn.addEventListener("mousedown", () => startMobileHold(action));
-        btn.addEventListener("mouseup",   () => stopMobileHold(action));
-        btn.addEventListener("mouseleave", () => stopMobileHold(action));
+        btn.addEventListener("pointerdown", start);
+        btn.addEventListener("pointerup", stop);
+        btn.addEventListener("pointercancel", stop);
+        btn.addEventListener("lostpointercapture", stop);
     });
 
     updateHealthUI();
