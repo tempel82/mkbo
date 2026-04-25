@@ -1536,6 +1536,8 @@ body.fight-page {
             height: 100%;
         }
 
+        /* ===== MOBILE UITGESCHAKELD =====
+
         .mobile-actions {
             display: flex !important;
             position: fixed;
@@ -1543,6 +1545,8 @@ body.fight-page {
             height: 150px;
             z-index: 999;
         }
+
+
 
         .dpad-btn {
             width: 36px;
@@ -1559,6 +1563,8 @@ body.fight-page {
             height: 46px;
             font-size: 10px;
         }
+
+                        ===== EINDE MOBILE ===== */
 
         .controls-help {
             display: none;
@@ -1776,6 +1782,7 @@ body.fight-page {
             display: none;
         }
 
+        /* ===== MOBILE UITGESCHAKELD =====
         .mobile-actions {
             display: flex !important;
             position: fixed;
@@ -1790,6 +1797,7 @@ body.fight-page {
         .mobile-controller {
             pointer-events: auto;
         }
+
 
         .dpad-btn {
             width: 34px;
@@ -1808,6 +1816,8 @@ body.fight-page {
             font-size: 9px;
         }
     }
+                        ===== EINDE MOBILE ===== */
+
 
     /* 📱 MOBILE FIX - FIGHT SCREEN */
     @media (max-width: 900px) and (orientation: landscape) {
@@ -1841,34 +1851,35 @@ body.fight-page {
             height: 12px;
         }
 
-        /* 🎮 mobile controls compacter */
+        /* ===== MOBILE UITGESCHAKELD =====       
+            
         .mobile-actions {
             transform: scale(0.8);
             transform-origin: bottom center;
         }
 
-        /* ⬅️ links controller */
+        /* ⬅️ links controller *
         .left-controller {
             left: 5px;
             bottom: 5px;
         }
 
-        /* ➡️ rechts controller */
+        /* ➡️ rechts controller *
         .right-controller {
             right: 5px;
             bottom: 5px;
         }
-
-        /* 🔴 attack knoppen dichter */
+        /* 🔴 attack knoppen dichter *
         .left-actions {
             left: 120px;
             bottom: 10px;
         }
-
         .right-actions {
             right: 120px;
             bottom: 10px;
         }
+                    ===== EINDE MOBILE ===== */
+
     }
 
     /* ✅ CHARACTER SELECT GRID FIX - PC */
@@ -2405,6 +2416,7 @@ body.fight-page {
     }
 
     /* ✅ ECHTE SMARTPHONE FIX: laat JS left/right weer bewegen */
+        /* 
     @media (max-width: 900px) and (orientation: landscape) {
 
         html body.is-mobile.fight-page #fighter1 {
@@ -2420,7 +2432,7 @@ body.fight-page {
             bottom: 6vh !important;
         }
     }
-
+*/
     /* =========================
    CLEAN MOBILE CONTROLS
 ========================= */

@@ -1,0 +1,56 @@
+﻿/* standaard: ALTIJD uit (veilig voor pc) */
+.mobile-actions {
+    display: none;
+}
+
+/* alleen tonen op smartphone + landscape */
+@media (max-width: 900px) and (orientation: landscape) {
+
+    body.is-mobile .mobile-actions {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 50;
+        pointer-events: none;
+    }
+
+    .mobile-controller {
+        position: absolute;
+        pointer-events: auto;
+    }
+
+    /* P1 links */
+    .left-controller {
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .left-actions {
+        left: 120px;
+        bottom: 20px;
+    }
+
+    /* P2 rechts */
+    .right-controller {
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .right-actions {
+        right: 120px;
+        bottom: 20px;
+    }
+
+    /* knoppen styling */
+    .dpad-btn,
+    .action-btn {
+        width: 60px;
+        height: 60px;
+        margin: 4px;
+        border-radius: 50%;
+        border: none;
+        font-size: 16px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+    }
+}

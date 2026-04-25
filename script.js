@@ -786,7 +786,7 @@ if (document.getElementById("fighter1")) {
             specialCooldown: false
         },
         p2: {
-            x: 12,
+            x: 6,
             health: 100,
             attacking: false,
             canMove: true,
